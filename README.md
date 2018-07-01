@@ -4,6 +4,13 @@
 [![Build Status](https://travis-ci.org/CTFd/CTFd.svg?branch=master)](https://travis-ci.org/CTFd/CTFd)
 [![CTFd Slack](https://slack.ctfd.io/badge.svg)](https://slack.ctfd.io/)
 
+由[xSadData](https://twitter.com/xsaddata)提供翻译。
+
+## 更新日志：
+    * 同步了2018.7.1日截止的版本
+    * 翻译了前端和部分后端
+    * Dockerfile使用了本地的源
+
 ## What is CTFd?
 CTFd is a Capture The Flag framework focusing on ease of use and customizability. It comes with everything you need to run a CTF and it's easy to customize with plugins and themes.
 
