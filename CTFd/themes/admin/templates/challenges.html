@@ -23,7 +23,7 @@
 
 <div class="jumbotron">
 	<div class="container">
-		<h1>Challenges
+		<h1>题目
 			<a class="no-decoration" href="{{ request.script_root }}/admin/chal/new">
 				<span role="button" data-toggle="tooltip" title="Create Challenge">
 					<i class="btn-fa fas fa-plus-circle"></i>
@@ -40,12 +40,12 @@
 					<thead>
 					<tr>
 						<td><b>ID</b></td>
-						<td><b>Name</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Category</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Value</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Type</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell text-center"><b>Status</b></td>
-						<td style="width: 200px;"><b>Settings</b></td>
+						<td><b>名称</b></td>
+						<td class="d-none d-md-table-cell d-lg-table-cell"><b>分类</b></td>
+						<td class="d-none d-md-table-cell d-lg-table-cell"><b>分值</b></td>
+						<td class="d-none d-md-table-cell d-lg-table-cell"><b>类型</b></td>
+						<td class="d-none d-md-table-cell d-lg-table-cell text-center"><b>状态</b></td>
+						<td style="width: 200px;"><b>设置</b></td>
 					</tr>
 					</thead>
 					<tbody>
@@ -58,9 +58,9 @@
 							<td class="d-none d-md-table-cell d-lg-table-cell">{{ challenge.type }}</td>
 							<td class="d-none d-md-table-cell d-lg-table-cell text-center">
 								{% if challenge.hidden %}
-									<span class="badge badge-danger">hidden</span>
+									<span class="badge badge-danger">隐藏</span>
 								{% else %}
-									<span class="badge badge-success">visible</span>
+									<span class="badge badge-success">可见</span>
 								{% endif %}
 							</td>
 							<td>

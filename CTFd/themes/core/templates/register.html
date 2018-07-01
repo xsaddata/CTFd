@@ -6,7 +6,7 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Register</h1>
+		<h1>注册</h1>
 	</div>
 </div>
 <div class="container">
@@ -22,25 +22,25 @@
 			<form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal">
 				<div class="form-group">
 					<label for="name-input">
-						Team Name
+						队名
 					</label>
 					<input class="form-control" type="text" name="name" id="name-input" {% if name %}value="{{ name }}"{% endif %} />
 				</div>
 				<div class="form-group">
 					<label for="email-input">
-						Email
+						邮箱
 					</label>
 					<input class="form-control" type="text" name="email" id="email-input" {% if email %}value="{{ email }}"{% endif %} />
 				</div>
 				<div class="form-group">
 					<label for="password-input">
-						Password
+						密码
 					</label>
 					<input class="form-control" type="password" name="password" id="password-input" {% if password %}value="{{ password }}"{% endif %}/>
 				</div>
 				<div class="row pt-3">
 					<div class="col-md-12">
-						<button type="submit" id="submit" tabindex="5" class="btn btn-md btn-primary btn-outlined float-right">Submit</button>
+						<button type="submit" id="submit" tabindex="5" class="btn btn-md btn-primary btn-outlined float-right">注册</button>
 					</div>
 				</div>
 				<input type="hidden" name="nonce" value="{{ nonce }}">

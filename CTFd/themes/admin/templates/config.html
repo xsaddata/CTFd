@@ -3,7 +3,7 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Configuration</h1>
+		<h1>配置</h1>
 	</div>
 </div>
 <div class="container">
@@ -11,19 +11,19 @@
 		<div class="col-md-3">
 			<ul class="nav nav-pills flex-column">
 				<li class="nav-item">
-					<a class="nav-link rounded-0 active" href="#appearance-section" aria-controls="appearance-section" role="tab" data-toggle="tab">Appearance</a>
+					<a class="nav-link rounded-0 active" href="#appearance-section" aria-controls="appearance-section" role="tab" data-toggle="tab">界面</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#accounts-section" aria-controls="accounts-section" role="tab" data-toggle="tab">Accounts</a>
+					<a class="nav-link rounded-0" href="#accounts-section" aria-controls="accounts-section" role="tab" data-toggle="tab">账号</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#email-section" aria-controls="email-section" role="tab" data-toggle="tab">Email</a>
+					<a class="nav-link rounded-0" href="#email-section" aria-controls="email-section" role="tab" data-toggle="tab">邮箱</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#ctftime-section" aria-controls="ctftime-section" role="tab" data-toggle="tab">Time</a>
+					<a class="nav-link rounded-0" href="#ctftime-section" aria-controls="ctftime-section" role="tab" data-toggle="tab">时间</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link rounded-0" href="#backup-section" aria-controls="backup-section" role="tab" data-toggle="tab">Backup</a>
+					<a class="nav-link rounded-0" href="#backup-section" aria-controls="backup-section" role="tab" data-toggle="tab">备份</a>
 				</li>
 			</ul>
 		</div>
@@ -42,7 +42,7 @@
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="appearance-section">
 					<div class="form-group">
-						<label for="ctf_name">CTF Name:</label>
+						<label for="ctf_name">CTF 名:</label>
 						<input class="form-control" id='ctf_name' name='ctf_name' type='text' placeholder="CTF Name"
 							   {% if ctf_name is defined and ctf_name != None %}value="{{ ctf_name }}"{% endif %}>
 					</div>
@@ -61,7 +61,7 @@
 								$('#ctf_logo_preview').css('visibility', 'hidden');
 								$(this).text('Logo will be removed on next update');
 							">
-								Remove Logo
+								删除 Logo
 							</button>
 						</div>
 						{% endif %}
@@ -72,7 +72,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="ctf_theme">Theme:</label>
+						<label for="ctf_theme">主题:</label>
 						<select class="form-control" id="ctf_theme" name="ctf_theme">
 							<option>{{ ctf_theme_config }}</option>
 							{% for theme in themes %}
@@ -85,7 +85,7 @@
 						<label>
 							<input id="workshop_mode" name="workshop_mode" type="checkbox"
 								   {% if workshop_mode %}checked{% endif %}>
-							Workshop Mode <i class="far fa-question-circle text-muted cursor-help" data-toggle="tooltip"
+							作坊模式 <i class="far fa-question-circle text-muted cursor-help" data-toggle="tooltip"
 											 data-placement="right"
 											 title="Hide all public team and score information."></i>
 						</label>
@@ -95,7 +95,7 @@
 						<label>
 							<input id="paused" name="paused" type="checkbox"
 								   {% if paused %}checked{% endif %}>
-							Pause CTF <i class="far fa-question-circle text-muted cursor-help" data-toggle="tooltip"
+							暂停 CTF <i class="far fa-question-circle text-muted cursor-help" data-toggle="tooltip"
 										 data-placement="right"
 										 title="Prevent users from submitting answers until unpaused. Challenges can still be viewed."></i>
 						</label>
@@ -104,12 +104,12 @@
 					<div class="form-check">
 						<label>
 							<input id="hide_scores" name="hide_scores" type="checkbox" {% if hide_scores %}checked{% endif %}>
-							Hide Scores from public view
+							不公开显示分数
 						</label>
 					</div>
 
 					<div class="form-group">
-						<label>CSS editor</label>
+						<label>CSS 编辑器</label>
 						<textarea class="form-control" id="css-editor" name="css" rows="7">{{ css|default('', True) }}</textarea>
 					</div>
 				</div>
@@ -117,14 +117,14 @@
 					<div class="form-check">
 						<label>
 							<input id="verify_emails" name="verify_emails" type="checkbox" {% if verify_emails %}checked{% endif %}>
-							Only allow users with verified emails
+							仅允许验证邮箱的用户
 						</label>
 					</div>
 
 					<div class="form-check">
 						<label>
 							<input id="view_challenges_unregistered" name="view_challenges_unregistered" type="checkbox" {% if view_challenges_unregistered %}checked{% endif %}>
-							Unregistered users can view challenges
+							游客可以看题
 						</label>
 					</div>
 
@@ -132,21 +132,21 @@
 						<label>
 							<input id="view_scoreboard_if_authed" name="view_scoreboard_if_authed" type="checkbox"
 								   {% if view_scoreboard_if_authed %}checked{% endif %}>
-							Scoreboard can only be viewed by logged in users
+							登录后可见积分榜
 						</label>
 					</div>
 
 					<div class="form-check">
 						<label>
 							<input id="prevent_registration" name="prevent_registration" type="checkbox" {% if prevent_registration %}checked{% endif %}>
-							Prevent public registration
+							不公开注册
 						</label>
 					</div>
 
 					<div class="form-check">
 						<label>
 							<input id="prevent_name_change" name="prevent_name_change" type="checkbox" {% if prevent_name_change %}checked{% endif %}>
-							Prevent team name changes
+							不允许更改队名
 						</label>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
 					</ul>
 
 					<div class="form-group">
-						<label>Mail From Address:</label>
+						<label>邮件发信地址:</label>
 						<input class="form-control" id='mailfrom_addr' name='mailfrom_addr' type='text'
 								placeholder="Email address used to send email"
 								{% if mailfrom_addr is defined and mailfrom_addr != None %}value="{{ mailfrom_addr }}"{% endif %}>
@@ -171,14 +171,14 @@
 						<div role="tabpanel" class="tab-pane active" id="mailserver">
 
 							<div class="form-group">
-								<label>Mail Server Address:</label>
+								<label>邮件服务器地址:</label>
 								<input class="form-control" id='mail_server' name='mail_server' type='text'
 										placeholder="Mail Server Address"
 										{% if mail_server is defined and mail_server != None %}value="{{ mail_server }}"{% endif %}>
 							</div>
 
 							<div class="form-group">
-								<label>Mail Server Port:</label>
+								<label>邮件服务器端口:</label>
 								<input class="form-control" id='mail_port' name='mail_port' type='text'
 										placeholder="Mail Server Port"
 										{% if mail_port is defined and mail_port != None %}value="{{ mail_port }}"{% endif %}>
@@ -186,12 +186,12 @@
 							<div class="form-check">
 							<label>
 								<input id="mail_useauth" name="mail_useauth" type="checkbox" {% if mail_useauth %}checked{% endif %}>
-									Use Mail Server Username and Password
+									使用用户名密码登录
 								</label>
 							</div>
 							<div id="mail_username_password">
 								<div class="form-group">
-									<label>Username:</label>
+									<label>用户名:</label>
 									{% if mail_username is defined and mail_username != None %}
 										<label for="mail_u"><sup>A mail server username is currently set</sup></label>
 									{% endif %}
@@ -199,14 +199,14 @@
 											placeholder="Username">
 								</div>
 								<div class="form-group">
-									<label for="mail_p">Password:</label>
+									<label for="mail_p">密码:</label>
 									{% if mail_password is defined and mail_password != None %}
 										<label for="mail_p"><sup>An mail server password is currently set</sup></label>
 									{% endif %}
 									<input class="form-control" id='mail_p' name='mail_p' autocomplete='off' type='password'
 											placeholder="Password">
 								</div>
-								<sup>Uncheck setting and update to remove username and password</sup>
+								<sup>取消选中设置并更新以删除用户名和密码</sup>
 								<br>
 								<br>
 							</div>
@@ -243,13 +243,13 @@
 				<div role="tabpanel" class="tab-pane" id="ctftime-section">
 					<ul class="nav nav-tabs mb-3">
 						<li class="nav-item">
-							<a class="nav-link active" href="#start-date" aria-controls="start-date" role="tab" data-toggle="tab">Start Time</a>
+							<a class="nav-link active" href="#start-date" aria-controls="start-date" role="tab" data-toggle="tab">开始时间</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#end-date" aria-controls="end-date" role="tab" data-toggle="tab">End Time</a>
+							<a class="nav-link" href="#end-date" aria-controls="end-date" role="tab" data-toggle="tab">结束时间</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#freeze-date" aria-controls="freeze-date" role="tab" data-toggle="tab">Freeze Time</a>
+							<a class="nav-link" href="#freeze-date" aria-controls="freeze-date" role="tab" data-toggle="tab">冻结时间</a>
 						</li>
 
 					</ul>
@@ -466,17 +466,17 @@
 					<div class="form-check">
 						<label>
 							<input id="view_after_ctf" name="view_after_ctf" type="checkbox" {% if view_after_ctf %}checked{% endif %}>
-							Allow challenges to be viewed after CTF end
+							结束后允许看题
 						</label>
 					</div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="backup-section">
 					<ul class="nav nav-tabs mb-3" role="tablist">
 						<li class="nav-item active">
-							<a class="nav-link active" href="#export-ctf" aria-controls="export-ctf" role="tab" data-toggle="tab">Export</a>
+							<a class="nav-link active" href="#export-ctf" aria-controls="export-ctf" role="tab" data-toggle="tab">导出</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#import-ctf" aria-controls="import-ctf" role="tab" data-toggle="tab">Import</a>
+							<a class="nav-link" href="#import-ctf" aria-controls="import-ctf" role="tab" data-toggle="tab">导入</a>
 						</li>
 					</ul>
 					<div class="tab-content">
@@ -538,7 +538,7 @@
 					</div>
 				</div>
 				<button type="submit" id="submit" tabindex="5"
-						class="btn btn-md btn-primary float-right">Update
+						class="btn btn-md btn-primary float-right">更新
 				</button>
 			</div>
 			</form>

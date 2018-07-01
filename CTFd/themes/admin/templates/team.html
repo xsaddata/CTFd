@@ -9,21 +9,21 @@
 	<div class="modal-dialog" role="document">
 	<div class="modal-content">
 		<div class="modal-header">
-			<h4 class="modal-title" id="create-award-label">Create Award</h4>
+			<h4 class="modal-title" id="create-award-label">创建奖励</h4>
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		</div>
 		<div class="modal-body">
 		<form id="award-create-form" method="POST" action="{{ request.script_root }}/admin/awards/add">
 			<div class="form-group">
-			<label for="award-name-input">Name</label>
+			<label for="award-name-input">名称</label>
 			<input type="text" class="form-control" id="award-name-input" name="name" placeholder="Enter award name">
 			</div>
 			<div class="form-group">
-			<label for="award-value-input">Value</label>
+			<label for="award-value-input">分值</label>
 			<input type="number" class="form-control" id="award-value-input" name="value" placeholder="Enter award value">
 			</div>
 			<div class="form-group">
-				<label for="award-category-input">Category</label>
+				<label for="award-category-input">分类</label>
 				<input type="text" class="form-control" id="award-category-input" name="category" placeholder="Enter award category">
 			</div>
 			<div class="form-group">
@@ -31,13 +31,13 @@
 				<textarea id="award-description-input" class="form-control" name="description" rows="10" placeholder="Description of what the award is for"></textarea>
 			</div>
 			<div class="form-group">
-			<label for="award-icon-input">Award Icon</label>
+			<label for="award-icon-input">图标</label>
 			<input type="file" id="award-icon-input" name="icon">
 			</div>
 			<input type="hidden" value="{{ team.id }}" name="teamid" id="teamid">
 			<input type="hidden" value="{{ nonce }}" name="nonce" id="nonce">
 			<div class="modal-footer">
-			<button type="submit" id="award-create-button" class="btn btn-primary">Create</button>
+			<button type="submit" id="award-create-button" class="btn btn-primary">创建</button>
 			</div>
 		</form>
 		</div>

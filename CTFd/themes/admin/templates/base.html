@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Admin Panel</title>
+	<title>管理面板</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="{{ request.script_root }}/themes/core/static/img/favicon.ico" type="image/x-icon">
@@ -34,26 +34,26 @@
 			</button>
 			<div class="collapse navbar-collapse" id="base-navbars">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/statistics">Statistics</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/statistics">概况</a></li>
 					<li class="nav-item dropdown">
-							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Pages</a>
+							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">页面</a>
 							<div class="dropdown-menu">
-									<a class="dropdown-item" href="{{ request.script_root }}/admin/pages">All Pages</a>
-									<a class="dropdown-item" href="{{ request.script_root }}/admin/pages?operation=create">New Page</a>
+									<a class="dropdown-item" href="{{ request.script_root }}/admin/pages">所有页面</a>
+									<a class="dropdown-item" href="{{ request.script_root }}/admin/pages?operation=create">新页面</a>
 							</div>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/teams">Teams</a></li>
-					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/scoreboard">Scoreboard</a></li>
-					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/chals">Challenges</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/teams">团队</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/scoreboard">积分榜</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/chals">题目</a></li>
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-						   aria-haspopup="true" aria-expanded="true">Submissions</a>
+						   aria-haspopup="true" aria-expanded="true">解题</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="{{ request.script_root }}/admin/correct_keys/1">Correct Submissions</a>
-							<a class="dropdown-item" href="{{ request.script_root }}/admin/wrong_keys/1">Wrong Submissions</a>
+							<a class="dropdown-item" href="{{ request.script_root }}/admin/correct_keys/1">当前提交</a>
+							<a class="dropdown-item" href="{{ request.script_root }}/admin/wrong_keys/1">错误答案</a>
 						</div>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/config">Config</a></li>
+					<li class="nav-item"><a class="nav-link" href="{{ request.script_root }}/admin/config">配置</a></li>
 
 					{% set plugin_menu = get_admin_plugin_menu_bar() %}
 					{% set plugins = get_configurable_plugins() %}
@@ -73,7 +73,7 @@
 
 						{% if plugins %}
 						<li class="nav-item dropdown">
-							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">插件 <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 									{% for plugin in plugins %}
 											<a class="dropdown-item" href="{{ request.script_root }}{{ plugin.route }}">{{ plugin.name }}</a>
@@ -92,7 +92,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<a class="btn btn-warning" href="{{ get_config('version_latest') }}">
-					A new CTFd version is available!
+					CTFd 新版本可用！
 				</a>
 			</div>
 		</div>
@@ -108,7 +108,7 @@
 	<footer class="footer">
 		<div class="container text-center">
 			<a href="https://ctfd.io">
-				<small class="text-muted">Powered by CTFd</small>
+				<small class="text-muted">由 CTFd 驱动</small>
 			</a>
 		</div>
 	</footer>

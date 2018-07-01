@@ -6,7 +6,7 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Teams
+		<h1>队伍
 			<span class="create-team" role="button" data-toggle="tooltip" title="Create Team">
 				<i class="btn-fa fas fa-plus-circle"></i>
 			</span>
@@ -18,7 +18,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2>Email Team</h2>
+				<h2>通知团队</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -32,7 +32,7 @@
 					<br>
 					<div id="email-user-errors"></div>
 					<button type="button" id="send-user-email" class="btn btn-primary float-right">
-						Send Message
+						发送消息
 					</button>
 				</form>
 			</div>
@@ -44,7 +44,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h2 class="modal-action">Edit Team</h2>
+				<h2 class="modal-action">编辑队伍</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -54,31 +54,31 @@
 					<input type="hidden" name="nonce" value="{{ nonce }}">
 					<input type="hidden" name="id">
 					<div class="form-group">
-						<label for="name">Team Name</label>
+						<label for="name">队名</label>
 						<input type="text" class="form-control" name="name" id="name"
 							   placeholder="Enter new team name" required>
 					</div>
 					<div class="form-group">
-						<label for="email">Email</label>
+						<label for="email">邮箱</label>
 						<input type="email" class="form-control" name="email" id="email"
 							   placeholder="Enter new email" required>
 					</div>
 					<div class="form-group">
-						<label for="password">Password</label>
+						<label for="password">密码</label>
 						<input type="password" class="form-control" name="password" id="password"/>
 					</div>
 					<div class="form-group">
-						<label for="website">Website</label>
+						<label for="website">网站</label>
 						<input type="text" class="form-control" name="website" id="website"
 							   placeholder="Enter website">
 					</div>
 					<div class="form-group">
-						<label for="affiliation">Affiliation</label>
+						<label for="affiliation">所属单位</label>
 						<input type="text" class="form-control" name="affiliation" id="affiliation"
 							   placeholder="Enter affiliation">
 					</div>
 					<div class="form-group">
-						<label for="affiliation">Country</label>
+						<label for="affiliation">国家</label>
 						<input type="text" class="form-control" name="country" id="country"
 							   placeholder="Enter country">
 					</div>
@@ -143,23 +143,23 @@
 					<tr>
 						<td width="10px" class="text-center"><b>ID</b>
 						</td>
-						<td class="text-center"><b>Team</b>
+						<td class="text-center"><b>团队</b>
 						</td>
-						<td class="d-none d-md-table-cell d-lg-table-cell text-center"><b>Email</b>
+						<td class="d-none d-md-table-cell d-lg-table-cell text-center"><b>邮箱</b>
 						</td>
-						<td class="d-none"><b>Website</b>
+						<td class="d-none"><b>网站</b>
 						</td>
-						<td class="d-none"><b>Affiliation</b>
+						<td class="d-none"><b>所属单位</b>
 						</td>
-						<td class="d-none"><b>Country</b>
+						<td class="d-none"><b>国家</b>
 						</td>
-						<td class="text-center"><b>Admin</b>
+						<td class="text-center"><b>管理员</b>
 						</td>
-						<td class="text-center"><b>Verified</b>
+						<td class="text-center"><b>已验证</b>
 						</td>
-						<td class="text-center"><b>Hidden</b>
+						<td class="text-center"><b>隐藏</b>
 						</td>
-						<td class="text-center"><b>Settings</b>
+						<td class="text-center"><b>设置</b>
 						</td>
 					</tr>
 				</thead>

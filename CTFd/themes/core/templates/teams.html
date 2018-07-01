@@ -6,7 +6,7 @@
 {% block content %}
 <div class="jumbotron">
 	<div class="container">
-		<h1>Teams</h1>
+		<h1>团队</h1>
 	</div>
 </div>
 <div class="container">
@@ -15,10 +15,10 @@
 			<table class="table table-striped">
 				<thead>
 					<tr>
-						<td><b>Team</b></td>
-						<td><b>Website</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Affiliation</b></td>
-						<td class="d-none d-md-table-cell d-lg-table-cell"><b>Country</b></td>
+						<td><b>团队</b></td>
+						<td><b>网站</b></td>
+						<td class="d-none d-md-table-cell d-lg-table-cell"><b>所属单位</b></td>
+						<td class="d-none d-md-table-cell d-lg-table-cell"><b>国家</b></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -63,7 +63,7 @@
 	{% if team_pages > 1 %}
 	<div class="row">
 		<div class="col-md-12">
-			<div class="text-center">Page
+			<div class="text-center">页面
 				<br>
 				{% if curr_page != 1 %}
 					<a href="{{ request.script_root }}/teams/{{ curr_page-1 }}">
