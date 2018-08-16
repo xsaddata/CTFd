@@ -3,6 +3,18 @@
 
 # Install tmux and virtualenv to support development
 $preProvision= <<SCRIPT
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo cat > /etc/apt/sources.list <<EOF
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ yakkety-security main restricted universe multiverse
+EOF
+sudo apt update
 sudo apt-get install tmux virtualenvwrapper mariadb-server -y
 SCRIPT
 

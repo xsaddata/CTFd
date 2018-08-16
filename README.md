@@ -7,6 +7,7 @@
 由[xSadData](https://twitter.com/xsaddata)提供翻译。
 
 ## 更新日志：
+    * Vagrant虚拟机使用清华apt源
     * 同步了2018.8.16日截止的版本
     * 同步了2018.7.1日截止的版本
     * 翻译了前端和部分后端
